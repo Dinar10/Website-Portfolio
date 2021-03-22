@@ -17,9 +17,13 @@
 .navbar {
   position: fixed;
   width: 100%;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
   padding: 15px 0;
-  background: crimson;
-  font-family: 'Ubuntu' sans-serif;
+  background: #ea4d2c;
 }
 .navbar .max-width {
   display: flex;
@@ -31,6 +35,13 @@
   font-size: 35px;
   font-weight: 600;
 }
+.navbar .logo a span {
+  color: #ea4d2c;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: #fff;
+}
 .navbar .menu li {
   list-style: none;
   display: inline-block;
@@ -40,6 +51,13 @@
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: #ea4d2c;
+}
+.navbar.sticky .menu li a:hover {
+  color: #fff;
 }
 
 /* ------------------------
@@ -47,13 +65,13 @@
     ------------------------------- */
 .home {
   display: flex;
-  background: url('img/malam.jpg') no-repeat center;
+  background: url('img/back.jpg') no-repeat center;
   height: 100vh;
   min-height: 500px;
   color: #fff;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Ubuntu' sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width {
   margin: auto 0 auto 40px;
@@ -69,4 +87,8 @@
 .home .home-content .text-3 {
   font-size: 40px;
   margin: 5px 0;
+}
+.home .home-content .text-3 span {
+  color: #ea4d2c;
+  font-weight: 500;
 }
