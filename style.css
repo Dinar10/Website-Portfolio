@@ -24,7 +24,7 @@
 }
 .navbar.sticky {
   padding: 15px 0;
-  background: #1a62f1;
+  background: #274b74;
 }
 .navbar .max-width {
   display: flex;
@@ -37,7 +37,7 @@
   font-weight: 600;
 }
 .navbar .logo a span {
-  color: #1a62f1;
+  color: #274b74;
   transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span {
@@ -55,7 +55,7 @@
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: #1a62f1;
+  color: #2567ec;
 }
 .navbar.sticky .menu li a:hover {
   color: #fff;
@@ -119,16 +119,13 @@
   background: none;
 }
 
-/* ------------------------------------------
-  about section
-  --------------------------------------------- */
+/* -----------------------
+  All content Similar code
+  -------------------------- */
 section {
   padding: 100px 0;
 }
-.about {
-  font-family: 'Poppins', sans-serif;
-}
-.about .title {
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -137,7 +134,7 @@ section {
   padding-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;
 }
-.about .title::before {
+section .title::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -147,8 +144,7 @@ section {
   background: #111;
   transform: translateX(-50%);
 }
-.about .title::after {
-  content: 'who i am';
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -158,7 +154,19 @@ section {
   background: #fff;
   transform: translateX(-50%);
 }
-.about .about-content {
+
+/* ------------------------------------------
+  about section
+  --------------------------------------------- */
+.about,
+.services {
+  font-family: 'Poppins', sans-serif;
+}
+.about .title::after {
+  content: 'who i m';
+}
+.about .about-content,
+.services .serv-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -183,15 +191,76 @@ section {
 }
 .about .about-content .right .text span {
   color: #1a62f1;
-  font-size: 30px;
+}
+/* --- bisa rapi texte --- */
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: #1a62f1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #1a62f1;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+  color: #4f84ee;
+  background: none;
+}
+.about .about-content .column {
+  width: 50%;
 }
 
+/* ------------------------
+  Services Section
+  ---------------------------------- */
+.services {
+  color: #fff;
+  background: #111;
+}
+.services .title::before {
+  background: #fff;
+}
+.services .title::after {
+  background: #111;
+  content: 'who i provide';
+}
+.services .serv-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-left: 23px;
+  cursor: pointer;
+}
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #1a62f1;
+}
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
 /* ----------------------------------
   responsive media query start 
   ----------------------------------------------------*/
-@media (max-width: 1104px) {
+@media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -243,6 +312,21 @@ section {
   .home .home-content a {
     font-size: 23px;
     padding: 10px 30px;
+  }
+  /* --- batas about --- */
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
   }
 }
 
